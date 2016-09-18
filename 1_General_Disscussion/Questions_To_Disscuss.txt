@@ -1,0 +1,56 @@
+1) Общее - Инкапсуляция, наследование, полиморфизм.
+
+2) Java - Устройство коллекций.
+- ArrayList
+- LinkedList
+- HashMap(+hashCode в Object, hash, put null?)
+- TreeSet, TreeMap
+
+3) Java Exceptions
+- Throwable
+- Error
+- Exception
+- RuntimeException
+- try with resources
+
+
+4) Java - Concurency - является ли класс потокобезопасным? Что значит volatile?
+
+Class A {
+	
+	public void doSomething(Arguments arg, Result result) {
+		
+		String p = arg.getParameter();
+		String res = process(p);
+		result.setResult(res);
+	}
+	
+	private String process(final String s) {
+		//process and return result
+	}
+}
+
+5) Java - параметры передаются в функцию по значению или по ссылке?
+
+6) Java - hashCode и equals
+	
+7) Java - Как инициализируются поля класса? Локальные переменные?
+
+8) Java - Garbage Collector
+- System.gc();
+
+9) Java - Условия A && B. Если A ложно, вычисляется ли B? A || B если А истинно, вычислеяется ли B.
+
+10) Общее - Класс и объект класса, в чем разница?
+
+11) Общее - на какие классы может указывать базовый класс? Наследник? Какие методы вызываются? Динамический выбор или на этапе компиляции?
+
+12) Java(Advanced) - что выведет код:
+
+    public static void main(String[] args) {
+        System.out.println("Hello" == "Hel" + "lo");
+    }
+13) Java Generics
+- Runtime  ошибки становятся ошибками компиляции.
+- 
+ 

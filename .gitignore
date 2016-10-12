@@ -1,0 +1,9 @@
+out
+*.class
+*.jar
+*png
+
+# JetBrains
+.idea/
+*.iml
+.DS_Store

@@ -3,7 +3,7 @@
 2) Java - Устройство коллекций.
 - ArrayList
 - LinkedList
-- HashMap(+hashCode в Object, hash, put null?)
+- HashMap(+hashCode в Object, hash, put null?, а что, если добавлять много элементов с одинаковым hashCode?)
 - TreeSet, TreeMap
 
 3) Java Exceptions
@@ -54,3 +54,8 @@ Class A {
 - Runtime  ошибки становятся ошибками компиляции.
 - 
  
+ 14) Java - "тормозит"? GC - "тормозит"? finallize не надо вызывать!
+ 
+ 15) Reflection - "тормозит"? Будет быстрее, если:
+  - setAccecible()
+  - cglib

@@ -1,0 +1,12 @@
+out
+*.class
+*.jar
+*png
+zip*
+ZIP*
+*.rtf
+
+# JetBrains
+.idea/
+*.iml
+.DS_Store

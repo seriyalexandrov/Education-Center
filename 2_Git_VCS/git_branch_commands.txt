@@ -42,3 +42,6 @@
 	git rebase --continue
 	git checkout branchB
 	git merge branchA --ff-only
+	
+5) Получам список бренчей стпометкой в какой мы ветке сейчас:
+	git branch (если хотим сортировать по дате последних коммитов добавляем --sort=-committerdate) 

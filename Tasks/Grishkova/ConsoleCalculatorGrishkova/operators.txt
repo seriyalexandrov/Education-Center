@@ -1,0 +1,9 @@
++ ru.ncedu.grishkova.cc.operators.Plus
+- ru.ncedu.grishkova.cc.operators.Minus
+* ru.ncedu.grishkova.cc.operators.Multiplication
+/ ru.ncedu.grishkova.cc.operators.Division
+^ ru.ncedu.grishkova.cc.operators.Power
+cos ru.ncedu.grishkova.cc.operators.Cosinus
+sqrt ru.ncedu.grishkova.cc.operators.Sqrt
+! ru.ncedu.grishkova.cc.operators.Factorial
+% ru.ncedu.grishkova.cc.operators.Modulus

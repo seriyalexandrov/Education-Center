@@ -2,7 +2,7 @@ package com.aleksandrov.examples.atomic;
 
 public class AtomicReadWrite {
 
-    private volatile static long value;
+    private static long value;
 
     private static class ReaderThread implements Runnable {
 

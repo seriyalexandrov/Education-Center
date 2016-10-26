@@ -1,9 +1,9 @@
 package com.aleksandrov.examples.unvisible;
 
-public class UnvisibleChanges {
+public class InvisibleChanges {
 
-    private static boolean ready;
-    private static int number;
+    private volatile static boolean ready;
+    private volatile static int number;
 
     private static class ReaderThread implements Runnable {
 
@@ -17,7 +17,8 @@ public class UnvisibleChanges {
 
     public static void main(String[] args) {
         new Thread(new ReaderThread()).start();
-        number = 42; ready = true;
+        ready = true;
+        number = 42;
     }
 
 }

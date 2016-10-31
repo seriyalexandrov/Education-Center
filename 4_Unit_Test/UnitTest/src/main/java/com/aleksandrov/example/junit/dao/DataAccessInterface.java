@@ -8,7 +8,7 @@ public interface DataAccessInterface {
 
     void finishTransaction();
 
-    Object getObjectById(BigInteger id);
+    String getObjectById(BigInteger id);
 
     void storeObject(Object o);
 

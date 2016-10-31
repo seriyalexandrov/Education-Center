@@ -11,32 +11,32 @@ import java.util.List;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class FunctionalityTest {
+public class DataBaseInteractionTest {
 
     DataAccessInterface accessInterface;
-    CoreFunctionality functionality;
+    DataBaseInteraction interaction;
 
     @Before
     public void setUp() throws NoSuchFieldException, IllegalAccessException {
-        accessInterface = FunctionalityTestUtils.createDataAccessMock();
-        functionality = new CoreFunctionality();
+        accessInterface = TestUtils.createDataAccessMock();
+        interaction = new DataBaseInteraction();
 
         //Set via reflection or make field package-private
-        FunctionalityTestUtils.setFunctionalityDataInterface(functionality, accessInterface);
+        TestUtils.setAccessDataInterface(interaction, accessInterface);
     }
 
     @Test
     public void testGetTenObjects() {
 
-        List<String> actualResult = functionality.getTenObjects();
-        List<String> expectedResult = FunctionalityTestUtils.expectedList();
+        List<String> actualResult = interaction.getTenObjects();
+        List<String> expectedResult = TestUtils.expectedList();
 
-        FunctionalityTestUtils.assertListsEquals(expectedResult, actualResult);
+        TestUtils.assertListsEquals(expectedResult, actualResult);
     }
 
     @Test
     public void testStoreObject() {
-        functionality.updateObject(BigInteger.TEN);
+        interaction.updateObject(BigInteger.TEN);
         verify(accessInterface, times(1)).startTransaction();
         verify(accessInterface, times(1)).finishTransaction();
         verify(accessInterface, times(1)).storeObject(Matchers.any(String.class));

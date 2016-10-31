@@ -15,7 +15,7 @@ public class Database implements DataAccessInterface {
     }
 
     @Override
-    public Object getObjectById(BigInteger id) {
+    public String getObjectById(BigInteger id) {
         throw new AssertionError("DB is not connected");
     }
 

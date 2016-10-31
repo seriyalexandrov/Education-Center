@@ -7,16 +7,18 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoreFunctionality {
+public class DataBaseInteraction {
 
     private final DataAccessInterface accessInterface = new Database();
 
-    public List<String> getTenObjects() {
+    public List<Object> getTenObjects() {
 
-        List<String> result = new ArrayList<>();
+        List<Object> result = new ArrayList<>();
 
         for(long objectId = 0; objectId < 10; objectId++) {
             BigInteger bigObjectId = BigInteger.valueOf(objectId);
+
+            //Обращение в базу данных
             result.add(accessInterface.getObjectById(bigObjectId));
         }
 
@@ -27,14 +29,14 @@ public class CoreFunctionality {
 
         accessInterface.startTransaction();
 
-        String o = accessInterface.getObjectById(id);
+        Object o = accessInterface.getObjectById(id);
         updateObjectData(o);
         accessInterface.storeObject(o);
 
         accessInterface.finishTransaction();
     }
 
-    private void updateObjectData(String o) {
-        //update String fields
+    private void updateObjectData(Object o) {
+        //update object fields
     }
 }

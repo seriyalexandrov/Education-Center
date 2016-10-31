@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CoreFunctionality functionality = new CoreFunctionality();
+        DataBaseInteraction functionality = new DataBaseInteraction();
 
         List<String> result = functionality.getTenObjects();
         System.out.println(result);

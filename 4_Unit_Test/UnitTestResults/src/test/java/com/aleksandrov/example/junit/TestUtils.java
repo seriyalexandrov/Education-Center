@@ -13,7 +13,7 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class FunctionalityTestUtils {
+public class TestUtils {
 
     static DataAccessInterface createDataAccessMock() {
         DataAccessInterface accessInterface = mock(DataAccessInterface.class);
@@ -26,7 +26,7 @@ public class FunctionalityTestUtils {
         return accessInterface;
     }
 
-    static void setFunctionalityDataInterface(CoreFunctionality f, DataAccessInterface i)
+    static void setAccessDataInterface(DataBaseInteraction f, DataAccessInterface i)
             throws NoSuchFieldException, IllegalAccessException {
         Field dataAccessField = f.getClass().getDeclaredField("accessInterface");
         dataAccessField.setAccessible(true);

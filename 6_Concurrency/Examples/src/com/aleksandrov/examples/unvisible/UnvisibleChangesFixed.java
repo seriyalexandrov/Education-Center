@@ -2,15 +2,25 @@ package com.aleksandrov.examples.unvisible;
 
 public class UnvisibleChangesFixed {
 
-    private static volatile boolean ready;
-    private static volatile int number;
+    private static boolean ready;
+    private volatile static int number;
 
     private static class ReaderThread implements Runnable {
 
         @Override
         public void run() {
-            while (!ready)
+            boolean localReady;
+
+            while (true) {
+
+                synchronized (UnvisibleChangesFixed.class) {
+                    localReady = ready;
+                }
+
+                if (localReady) break;
+
                 Thread.yield();
+            }
             System.out.println(number);
         }
     }
@@ -18,7 +28,10 @@ public class UnvisibleChangesFixed {
     public static void main(String[] args) {
 
         new Thread(new ReaderThread()).start();
-        number = 42;
-        ready = true;
+
+        synchronized (UnvisibleChangesFixed.class) {
+            number = 42;
+            ready = true;
+        }
     }
 }

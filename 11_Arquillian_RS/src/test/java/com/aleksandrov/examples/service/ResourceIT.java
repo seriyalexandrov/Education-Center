@@ -20,7 +20,7 @@ import java.net.URL;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
-public class ResourceTest {
+public class ResourceIT {
 
     private static WebTarget target;
 

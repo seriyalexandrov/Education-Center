@@ -9,5 +9,6 @@ out
 *.iml
 *.txt
 target
+node_modules
 
 .DS_Store

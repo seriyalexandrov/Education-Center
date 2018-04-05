@@ -20,7 +20,7 @@ public class Main {
         }
 
         if (log.isTraceEnabled()) {
-            log.trace("debug enabled", longCalculation());
+            log.trace("trace enabled", longCalculation());
         }
 
         POJO pojo = new POJO();

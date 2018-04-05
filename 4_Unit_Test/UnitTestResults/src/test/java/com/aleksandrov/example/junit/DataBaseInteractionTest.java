@@ -21,7 +21,7 @@ public class DataBaseInteractionTest {
         accessInterface = TestUtils.createDataAccessMock();
         interaction = new DataBaseInteraction();
 
-        //Set via reflection or make field package-private
+        //Set field via reflection or make field package-private
         TestUtils.setAccessDataInterface(interaction, accessInterface);
     }
 

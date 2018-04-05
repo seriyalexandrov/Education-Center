@@ -32,14 +32,8 @@
         </dependency>
         <!-- mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
-<<<<<<< HEAD
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-=======
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.1.4</version>
->>>>>>> 6e67356e48277b9acc3f4bd64c8ff4308578d8c9
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
